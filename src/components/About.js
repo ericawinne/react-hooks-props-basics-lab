@@ -1,14 +1,17 @@
-import React from "react";
+import React from "react"
 
-function About() {
-  return (
+import Links from "./Links.js"
+
+const About = ({ bio, links}) => (
     <div id="about">
       <h2>About Me</h2>
-      <p>Put the bio in here</p>
+      { bio && <p>{bio}</p> }
       <img src="https://i.imgur.com/mV8PQxj.gif" alt="I made this" />
-      {/* add your <Links /> component here */}
+      <Links
+      github= {links.github}
+      linkedin= {links.linkedin}
+      />
     </div>
-  );
-}
+  )
 
-export default About;
+export default About
